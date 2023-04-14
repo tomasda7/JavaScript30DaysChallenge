@@ -19,28 +19,56 @@
     }
 
     // Regular
+    console.log('Drake - 2043: OVO ODYSSEY');
 
     // Interpolated
+    console.log('Drake - %s: OVO ODYSSEY', '2043');
 
     // Styled
+    console.log('%c Drake - 2043: OVO ODYSSEY', 'font-size: 30px; background: blue;')
 
     // warning!
+    console.warn('BE CAREFUL MY FRIEND');
 
-    // Error :|
+    // Error 
+    console.error('WTF BRO, WHAT YOU DOING?')
 
     // Info
+    console.info('A crocodile cannot stick its tongue out.');
 
     // Testing
+    const p = document.querySelector('p');
+
+    console.assert(p.classList.contains('drake'), 'That is f*** wrong!');
 
     // clearing
+    console.clear();
 
     // Viewing DOM Elements
-
+    console.dirxml(p);
+    console.dir(p);
     // Grouping together
+    dogs.forEach(dog => {
+      console.groupCollapsed(`${dog.name}`);
+      console.log(`this is ${dog.name}`)
+      console.log(`${dog.name} is ${dog.age * 7} dog years old`);
+      console.groupEnd(`${dog.name}`);
+    });
 
     // counting
+    console.count('Argentina');
+    console.count('Argentina');
+    console.count('Argentina');
+    console.count('Francia');
+    console.count('Francia');
+    console.count('Francia');
 
     // timing
+    console.time('fetching data');
+    fetch('https://api.github.com/users/tomasda7').then(data => data.json()).then(data => {
+      console.timeEnd('fetching data');
+      console.log(data);
+    })
 
   </script>
 </body>
