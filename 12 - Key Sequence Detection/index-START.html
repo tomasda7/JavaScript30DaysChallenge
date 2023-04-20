@@ -7,7 +7,19 @@
   <link rel="icon" href="https://fav.farm/🔥" />
 </head>
 <body>
-<script>
-</script>
+  <script>
+    const keySecuence = [];
+    const secretCode = 'tomasda';
+
+    window.addEventListener('keyup', (e) => {
+
+      keySecuence.push(e.key);
+      keySecuence.splice(-secretCode.length - 1, keySecuence.length - secretCode.length);
+
+      if(keySecuence.join('').includes(secretCode)) {
+        cornify_add();
+      }
+    });
+  </script>
 </body>
 </html>
