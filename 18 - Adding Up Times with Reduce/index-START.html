@@ -184,12 +184,12 @@
   </ul>
 
   <script>
-    const nodeList = [...document.querySelectorAll('[data-time]')]; //converting nodeList to array
+    const nodeList = [...document.querySelectorAll('[data-time]')]; //by converting nodeList to array
     
-    const time = nodeList.map(elem => elem.dataset.time); //taking only time as a array of strings
+    const time = nodeList.map(elem => elem.dataset.time); //taking only time as an array of strings
 
     const seconds = time.map(time => {
-      const [mins, secs] = time.split(':').map(parseFloat); //converting mins and seconds in just seconds
+      const [mins, secs] = time.split(':').map(parseFloat); //by converting mins and seconds into only seconds
       return (mins * 60) + secs;
     })
 
